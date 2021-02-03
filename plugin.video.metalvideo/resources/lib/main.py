@@ -105,7 +105,7 @@ def video_list(_, url, filter_mode=0):
         root_elem = resp.parse("div", attrs={"class": "col-md-12"})
         results = root_elem.iterfind("ul/li/div")
     elif filter_mode == 1:  # Related videos
-        root_elem = resp.parse("ul", attrs={"class": "pm-ul-sidelist-videos list-unstyled"})
+        root_elem = resp.parse("ul", attrs={"class": "pm-ul-browse-videos list-unstyled"})
         results = root_elem.iterfind("li")
     elif filter_mode == 2:  # Featured Videos
         root_elem = resp.parse("ul", attrs={"id": "pm-carousel_featured"})
